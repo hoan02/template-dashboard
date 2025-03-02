@@ -11,4 +11,11 @@ export class HeaderComponent {
   onToggleMenu(): void {
     this.toggleMenu.emit();
   }
+
+  toggleDarkMode() {
+    const element = document.querySelector('html');
+    if (element) {
+      element.classList.toggle('my-app-dark');
+    }
+  }
 }

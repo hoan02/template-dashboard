@@ -3,7 +3,12 @@ import { HomeComponent } from './components/home/home.component';
 
 export const appRoutes: Route[] = [
   {
-    path: 'home',
-    component: HomeComponent
-  }
+    path: 'products',
+    loadChildren: () =>
+      import('products/Module').then((m) => m!.RemoteEntryModule),
+  },
+  {
+    path: '',
+    component: HomeComponent,
+  },
 ];

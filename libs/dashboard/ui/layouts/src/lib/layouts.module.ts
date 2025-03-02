@@ -4,9 +4,10 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, ButtonModule],
   declarations: [
     MainLayoutComponent,
     SidebarComponent,

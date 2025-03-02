@@ -1,16 +1,9 @@
-<header class="bg-white shadow-md h-16 flex items-center px-4">
-  <button (click)="onToggleMenu()" class="p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none">
-    <span class="material-icons">menu</span>
-  </button>
-
-  <div class="ml-4 text-xl font-semibold">Dashboard</div>
-
+<header class="shadow-md h-16 flex items-center px-4">
+  <div class="flex items-center space-x-4">
+    <p-button label="Menu" (onClick)="onToggleMenu()" />
+    <p-button label="Toggle Dark Mode" (onClick)="toggleDarkMode()" />
+  </div>
   <div class="ml-auto flex items-center space-x-4">
-    <!-- User profile, notifications, etc. -->
-    <button class="p-2 rounded-md text-gray-600 hover:bg-gray-100">
-      <span class="material-icons">notifications</span>
-    </button>
-
     <div class="flex items-center space-x-2">
       <div class="h-8 w-8 rounded-full bg-gray-300"></div>
       <span>User Name</span>

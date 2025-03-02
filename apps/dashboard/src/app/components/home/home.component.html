@@ -1,5 +1,3 @@
-<p-button label="Toggle Dark Mode" (onClick)="toggleDarkMode()" />
-
 <div class="p-10">
   <table-be [data]="products" [columns]="columns" [actions]="actions" (create)="openNew()"
     (delete)="deleteSelectedProducts()" (export)="exportCSV()"></table-be>

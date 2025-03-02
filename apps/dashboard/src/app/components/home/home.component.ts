@@ -11,17 +11,6 @@ import { TableAction, TableBeComponent, TableColumn } from 'libs/shared/ui/table
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  toggleDarkMode() {
-    const element = document.querySelector('html');
-    if (element) {
-      element.classList.toggle('my-app-dark');
-    }
-  }
-
-  // products = [
-  //   { id: 1, name: 'Laptop', price: 1000, category: 'Electronics', image: 'https://robohash.org/d2a2a77af3d11f7f5df42626ab3c0609?set=set4&bgset=&size=400x400', inventoryStatus: 'INSTOCK' },
-  //   { id: 2, name: 'Shirt', price: 30, category: 'Clothing', image: 'https://robohash.org/d2a2a77af3d11f7f5df42626ab3c0609?set=set4&bgset=&size=400x400', inventoryStatus: 'OUTOFSTOCK' }
-  // ];
   products = [
     { id: 1, name: 'Laptop', price: 1000, category: 'Electronics', image: 'https://robohash.org/d2a2a77af3d11f7f5df42626ab3c0609?set=set4&bgset=&size=400x400', inventoryStatus: 'INSTOCK' },
     { id: 2, name: 'Shirt', price: 30, category: 'Clothing', image: 'https://robohash.org/d2a2a77af3d11f7f5df42626ab3c0609?set=set4&bgset=&size=400x400', inventoryStatus: 'OUTOFSTOCK' }
