@@ -19,6 +19,7 @@
       "@dashboard/data-access": ["libs/dashboard/data-access/src/index.ts"],
       "@dashboard/feature": ["libs/dashboard/feature/src/index.ts"],
       "@dashboard/ui": ["libs/dashboard/ui/src/index.ts"],
+
       "@shared/constants": ["libs/shared/constants/src/index.ts"],
       "@shared/data-access": ["libs/shared/data-access/src/index.ts"],
       "@shared/feature": ["libs/shared/feature/src/index.ts"],
