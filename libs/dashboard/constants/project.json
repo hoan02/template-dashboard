@@ -1,8 +1,8 @@
 {
-  "name": "constants",
+  "name": "dashboard-constants",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/dashboard/constants/src",
-  "prefix": "lib",
+  "prefix": "dashboard",
   "projectType": "library",
   "tags": [],
   "targets": {
