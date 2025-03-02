@@ -18,12 +18,9 @@
       "@dashboard/constants": ["libs/dashboard/constants/src/index.ts"],
       "@dashboard/data-access": ["libs/dashboard/data-access/src/index.ts"],
       "@dashboard/feature": ["libs/dashboard/feature/src/index.ts"],
-      "@dashboard/ui": ["libs/dashboard/ui/src/index.ts"],
-
-      "@shared/constants": ["libs/shared/constants/src/index.ts"],
+      "@dashboard/layouts": ["libs/dashboard/ui/layouts/src/index.ts"],
       "@shared/data-access": ["libs/shared/data-access/src/index.ts"],
-      "@shared/feature": ["libs/shared/feature/src/index.ts"],
-      "@shared/ui": ["libs/shared/ui/src/index.ts"]
+      "table-be": ["libs/shared/ui/table-be/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

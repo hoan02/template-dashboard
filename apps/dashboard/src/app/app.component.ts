@@ -1,9 +1,10 @@
+import { LayoutsModule } from '@dashboard/layouts';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, LayoutsModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
 })

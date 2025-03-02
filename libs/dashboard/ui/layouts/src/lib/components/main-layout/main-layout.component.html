@@ -1,0 +1,22 @@
+<div class="flex h-screen flex-col">
+  <!-- Header -->
+  <lib-header class="fixed top-0 w-full z-10" (toggleMenu)="toggleSidebar()"></lib-header>
+
+  <div class="flex flex-1 pt-16">
+    <!-- Sidebar -->
+    <lib-sidebar [collapsed]="isSidebarCollapsed" class="h-full"
+      [ngClass]="{'hidden': isSidebarCollapsed}"></lib-sidebar>
+
+    <!-- Main content area -->
+    <div class="flex flex-col flex-1 overflow-auto transition-all duration-300"
+      [ngClass]="{'pl-64': !isSidebarCollapsed, 'pl-0': isSidebarCollapsed}">
+      <!-- Content -->
+      <main class="flex-1 p-6 overflow-auto">
+        <ng-content></ng-content>
+      </main>
+
+      <!-- Footer -->
+      <lib-footer></lib-footer>
+    </div>
+  </div>
+</div>
