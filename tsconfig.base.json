@@ -16,12 +16,15 @@
     "baseUrl": ".",
     "paths": {
       "@dashboard/constants": ["libs/dashboard/constants/src/index.ts"],
+      "@dashboard/ui/customs": ["libs/dashboard/ui/customs/src/index.ts"],
       "@dashboard/data-access": ["libs/dashboard/data-access/src/index.ts"],
       "@dashboard/feature": ["libs/dashboard/feature/src/index.ts"],
-      "@dashboard/layouts": ["libs/dashboard/ui/layouts/src/index.ts"],
+      "@dashboard/ui/layouts": ["libs/dashboard/ui/layouts/src/index.ts"],
+
       "@shared/data-access": ["libs/shared/data-access/src/index.ts"],
-      "products/Module": ["apps/products/src/app/remote-entry/entry.module.ts"],
-      "table-be": ["libs/shared/ui/table-be/src/index.ts"]
+      "@shared/ui/table-be": ["libs/shared/ui/table-be/src/index.ts"],
+
+      "products/Module": ["apps/products/src/app/remote-entry/entry.module.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,5 @@
+<div class="card flex justify-cente">
+  <p-menu #menu [popup]="true" [model]="menuItems" />
+  <p-button [icon]="themeService.isDark() ? 'pi pi-moon' : 'pi pi-sun'" severity="secondary"
+    (click)="menu.toggle($event)" />
+</div>

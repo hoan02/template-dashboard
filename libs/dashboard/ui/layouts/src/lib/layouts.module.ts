@@ -5,9 +5,10 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ButtonModule } from 'primeng/button';
+import { CustomsModule } from '@dashboard/ui/customs';
 
 @NgModule({
-  imports: [CommonModule, ButtonModule],
+  imports: [CommonModule, ButtonModule, CustomsModule],
   declarations: [
     MainLayoutComponent,
     SidebarComponent,

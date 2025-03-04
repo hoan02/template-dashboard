@@ -1,4 +1,4 @@
-import { LayoutsModule } from '@dashboard/layouts';
+import { LayoutsModule } from '@dashboard/ui/layouts';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
