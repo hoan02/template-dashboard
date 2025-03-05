@@ -1,11 +1,27 @@
 {
-  "name": "dashboard-feature",
+  "name": "feature",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/dashboard/feature/src",
-  "prefix": "dashboard",
+  "prefix": "lib",
   "projectType": "library",
   "tags": [],
   "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/dashboard/feature/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/dashboard/feature/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/dashboard/feature/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],

@@ -1,6 +1,6 @@
-import { LayoutsModule } from '@dashboard/ui/layouts';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { LayoutsModule } from '@dashboard/feature';
 
 @Component({
   standalone: true,

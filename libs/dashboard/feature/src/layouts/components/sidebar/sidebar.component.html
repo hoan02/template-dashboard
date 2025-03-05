@@ -1,0 +1,17 @@
+<div class="h-full flex flex-col bg-gray-800 text-white shadow-lg transition-all duration-300">
+  <div class="h-16 flex items-center justify-between p-3 border-b border-gray-700">
+    <div *ngIf="!collapsed" class="text-xl font-bold">Logo</div>
+    <button (click)="toggleSidebar()" class="p-3 rounded hover:bg-gray-700">
+      <i class="pi" [ngClass]="{'pi-arrow-left': !collapsed, 'pi-arrow-right': collapsed}"></i>
+    </button>
+  </div>
+
+  <div class="flex-1 overflow-auto">
+    <ul class="space-y-1 p-3">
+      <li *ngFor="let item of menuItems" class="cursor-pointer p-3 rounded hover:bg-gray-700">
+        <i class="pi" [ngClass]="item.icon"></i>
+        <span *ngIf="!collapsed" class="ml-4">{{ item.label }}</span>
+      </li>
+    </ul>
+  </div>
+</div>

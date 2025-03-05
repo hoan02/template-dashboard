@@ -1,0 +1,22 @@
+<div class="h-screen w-full flex overflow-hidden">
+  <!-- Sidebar -->
+  <lib-sidebar [collapsed]="isSidebarCollapsed" (collapsedChange)="toggleSidebar()"
+    class="h-full transition-all duration-300" [ngClass]="{'w-72': !isSidebarCollapsed, 'w-16': isSidebarCollapsed}">
+  </lib-sidebar>
+
+  <!-- Right section (Header + Content + Footer) -->
+  <div class="flex flex-col flex-1 overflow-hidden">
+    <!-- Header -->
+    <lib-header class="fixed top-0 right-0 z-10 h-16 transition-all duration-300"
+      [ngClass]="{'left-72': !isSidebarCollapsed, 'left-16': isSidebarCollapsed}">
+    </lib-header>
+
+    <!-- Content + Footer wrapper -->
+    <div class="flex flex-col flex-1 overflow-auto mt-16">
+      <!-- Main content -->
+      <main class="flex-1 overflow-auto p-3">
+        <ng-content></ng-content>
+      </main>
+    </div>
+  </div>
+</div>

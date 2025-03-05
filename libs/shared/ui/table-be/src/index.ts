@@ -1,2 +1,2 @@
-export * from './lib/table-be.component';
+export * from './lib/table-be/table-be.component';
 export * from './models'
