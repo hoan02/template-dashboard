@@ -1,17 +1,42 @@
-<div class="h-full flex flex-col bg-gray-800 text-white shadow-lg transition-all duration-300">
-  <div class="h-16 flex items-center justify-between p-3 border-b border-gray-700">
+<div
+  class="h-full flex flex-col border-r border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+  <!-- Header -->
+  <div class="h-16 flex items-center justify-between p-3 border-b border-dashed border-gray-200 dark:border-gray-700">
     <div *ngIf="!collapsed" class="text-xl font-bold">Logo</div>
-    <button (click)="toggleSidebar()" class="p-3 rounded hover:bg-gray-700">
+    <button (click)="toggleSidebar()" class="p-3 rounded hover:bg-gray-200 dark:hover:bg-gray-800">
       <i class="pi" [ngClass]="{'pi-arrow-left': !collapsed, 'pi-arrow-right': collapsed}"></i>
     </button>
   </div>
 
+  <!-- Sidebar Menu -->
   <div class="flex-1 overflow-auto">
     <ul class="space-y-1 p-3">
-      <li *ngFor="let item of menuItems" class="cursor-pointer p-3 rounded hover:bg-gray-700">
-        <i class="pi" [ngClass]="item.icon"></i>
-        <span *ngIf="!collapsed" class="ml-4">{{ item.label }}</span>
-      </li>
+      <ng-container *ngFor="let item of menuItems">
+        <ng-container *ngTemplateOutlet="renderMenu; context: { $implicit: item }"></ng-container>
+      </ng-container>
     </ul>
   </div>
 </div>
+
+<!-- Recursive Menu Template -->
+<ng-template #renderMenu let-node>
+  <li>
+    <div class="flex items-center justify-between cursor-pointer p-3 rounded
+             bg-transparent hover:bg-gray-200 dark:hover:bg-gray-800"
+      [ngClass]="{'bg-gray-200 dark:bg-gray-800': isActive(node)}" (click)="toggleMenu(node)">
+      <div class="flex items-center">
+        <i class="pi" [ngClass]="node.icon"></i>
+        <span *ngIf="!collapsed" class="ml-3">{{ node.title }}</span>
+      </div>
+      <i *ngIf="node.children?.length && !collapsed" class="pi"
+        [ngClass]="{'pi-chevron-down': node.expanded, 'pi-chevron-right': !node.expanded}"></i>
+    </div>
+
+    <!-- Submenu -->
+    <ul *ngIf="node.children?.length && node.expanded" class="pl-4 space-y-1">
+      <ng-container *ngFor="let child of node.children">
+        <ng-container *ngTemplateOutlet="renderMenu; context: { $implicit: child }"></ng-container>
+      </ng-container>
+    </ul>
+  </li>
+</ng-template>
