@@ -8,8 +8,8 @@ export class ThemeModeService {
   public mode = signal<ThemeMode>('system');
 
   /** Kiểm tra xem theme hiện tại có phải 'dark' không */
-  public isDark = computed(() => 
-    this.mode() === 'dark' || 
+  public isDark = computed(() =>
+    this.mode() === 'dark' ||
     (this.mode() === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
   );
 

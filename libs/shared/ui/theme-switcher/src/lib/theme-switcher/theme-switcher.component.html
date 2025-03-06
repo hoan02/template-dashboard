@@ -1,5 +1,18 @@
-<div class="card flex justify-cente">
-  <p-menu #menu [popup]="true" [model]="menuItems" />
-  <p-button [icon]="themeModeService.isDark() ? 'pi pi-moon' : 'pi pi-sun'" severity="secondary"
-    (click)="menu.toggle($event)" />
+<div class="relative">
+  <!-- Nút chuyển đổi menu -->
+  <button (click)="toggleMenu()" class="p-2 rounded-lg border bg-gray-100 dark:bg-gray-800 dark:border-gray-700">
+    <i [class]="themeModeService.isDark() ? 'pi pi-moon' : 'pi pi-sun'"></i>
+  </button>
+
+  <!-- Dropdown Menu -->
+  <div *ngIf="isMenuOpen"
+    class="absolute -left-10 mt-2 w-32 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg">
+    <ul class="py-3 text-gray-700 dark:text-gray-200">
+      <li *ngFor="let item of menuItems" (click)="setTheme(item.mode)"
+        class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center">
+        <i [class]="item.icon" class="mr-2"></i>
+        <span>{{ item.label }}</span>
+      </li>
+    </ul>
+  </div>
 </div>
