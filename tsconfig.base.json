@@ -17,12 +17,12 @@
     "paths": {
       "@dashboard/data-access": ["libs/dashboard/data-access/src/index.ts"],
       "@dashboard/feature": ["libs/dashboard/feature/src/index.ts"],
-
       "@shared/data-access": ["libs/shared/data-access/src/index.ts"],
       "@shared/ui/table-be": ["libs/shared/ui/table-be/src/index.ts"],
       "@shared/ui/theme-switcher": [
         "libs/shared/ui/theme-switcher/src/index.ts"
       ],
+      "auth/Module": ["libs/dashboard/feature/src/auth/auth.module.ts"],
       "products/Module": ["apps/products/src/app/remote-entry/entry.module.ts"]
     }
   },
