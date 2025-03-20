@@ -2,15 +2,17 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { TableAction, TableBeComponent, TableColumn } from 'libs/shared/ui/table-be/src';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ButtonModule, TableBeComponent],
+  imports: [CommonModule, ButtonModule, TableBeComponent, FontAwesomeModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+
   products = [
     { id: 1, name: 'Laptop', price: 1000, category: 'Electronics', image: 'https://robohash.org/d2a2a77af3d11f7f5df42626ab3c0609?set=set4&bgset=&size=400x400', inventoryStatus: 'INSTOCK' },
     { id: 2, name: 'Shirt', price: 30, category: 'Clothing', image: 'https://robohash.org/d2a2a77af3d11f7f5df42626ab3c0609?set=set4&bgset=&size=400x400', inventoryStatus: 'OUTOFSTOCK' }
